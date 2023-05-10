@@ -1,0 +1,12 @@
+
+
+saves
+
+**/__pycache__/
+data/cifar-10-batches-py/
+wandb
+data
+*.gz
+supcon.pth
+
+
