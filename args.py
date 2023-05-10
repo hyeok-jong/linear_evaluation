@@ -10,7 +10,7 @@ def set_parser():
     parser.add_argument('--method', type = str, default = 'finetune', help = ['fineture, linear'])
 
     # learning hyperparameters
-    parser.add_argument('--epochs', type = int, default = 3)
+    parser.add_argument('--epochs', type = int, default = 1)
     parser.add_argument('--batch_size', type = int, default = 32)
 
     parser.add_argument('--wandb_entity', type=str, default='hyeokjong', help='Wandb ID')

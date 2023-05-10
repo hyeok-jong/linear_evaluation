@@ -1,4 +1,4 @@
-datasets=("dtd" "pet" "caltech101" "flowers" "sun")
+datasets=("caltech101" "flowers" "sun")
 methods=("linear" "finetune")
 for method in "${methods[@]}"
 do

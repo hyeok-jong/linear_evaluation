@@ -3,6 +3,15 @@ import torch
 import torchvision
 import torchvision.transforms as transforms
 
+class ToRGB(torch.nn.Module):
+    def forward(self, image_tensor):
+        if image_tensor.shape[0] == 1:
+            image_tensor = image_tensor.repeat(3, 1, 1)
+        return image_tensor
+
+
+
+
 MEAN = {
     'cifar10': [0.4914, 0.4822, 0.4465],
     'cifar100': [0.5071, 0.4867, 0.4408],
@@ -214,6 +223,46 @@ def set_loaders(dataset, batch_size = 256, method = 'string'):
 
 
     elif dataset == 'caltech101':
+
+
+        if method == 'linear':
+            train_transform = transforms.Compose([
+                # automatically along the shorter side
+                transforms.Resize(71, interpolation = transforms.InterpolationMode.BICUBIC),
+                transforms.CenterCrop(71),
+                transforms.ToTensor(),
+                ToRGB(),
+                transforms.Normalize(MEAN[dataset], STD[dataset])
+                ])
+            test_transform = transforms.Compose([
+                transforms.Resize(71, interpolation = transforms.InterpolationMode.BICUBIC),
+                transforms.CenterCrop(71),            
+                transforms.ToTensor(),
+                ToRGB(),
+                transforms.Normalize(MEAN[dataset], STD[dataset])
+                ])
+            
+        elif method == 'finetune':
+            train_transform = transforms.Compose([
+                # automatically along the shorter side
+                transforms.Resize(256, interpolation = transforms.InterpolationMode.BICUBIC),
+                transforms.RandomCrop(71),
+                transforms.RandomHorizontalFlip(p=0.5),
+                transforms.ToTensor(),
+                ToRGB(),
+                transforms.Normalize(MEAN[dataset], STD[dataset])
+                ])
+            test_transform = transforms.Compose([
+                transforms.Resize(256, interpolation = transforms.InterpolationMode.BICUBIC),
+                transforms.CenterCrop(71),            
+                transforms.ToTensor(),
+                ToRGB(),
+                transforms.Normalize(MEAN[dataset], STD[dataset])
+                ])
+
+
+
+
         data_set = torchvision.datasets.Caltech101(
             root = data_root_dir,
             download = True,

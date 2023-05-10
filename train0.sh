@@ -1,7 +1,7 @@
 
 
 # Url error "stanfordcars"
-datasets=("cifar10" "cifar100" "food101" "aircraft")
+datasets=("cifar10" "cifar100" "food101" "aircraft" "dtd" "pet")
 methods=("linear" "finetune")
 for method in "${methods[@]}"
 do
