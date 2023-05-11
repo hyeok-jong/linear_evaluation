@@ -57,40 +57,42 @@ class Trainer():
             loss_list.append(loss.detach().cpu().item()*batch_size)
             accuracy = self.accuracy_function(outputs.detach().cpu(), labels.cpu())
             acc_list.append(accuracy.item()*batch_size)
-        
+
+            self.lr_scheduler.step()
+            
         return {
             'train loss' : sum(loss_list) / total_size,
             'train acc' : sum(acc_list) / total_size,
         }
 
     def one_epoch_valid(self):
-        loss_list = list()
-        acc_list = list()
-        
-        # Freezing BatchNorm
-        self.encoder.eval()
-        self.classifier.eval()
-        total_size = 0
-        for images, labels in self.valid_loader:
-            images = images.cuda()
-            labels = labels.cuda()
-            batch_size = labels.shape[0]
-            total_size += batch_size
+        # Freeze parameters except BatchNorm
+        with torch.no_grad():
+            loss_list = list()
+            acc_list = list()
+            # Freezing BatchNorm
+            self.encoder.eval()
+            self.classifier.eval()
+            total_size = 0
+            for images, labels in self.valid_loader:
+                images = images.cuda()
+                labels = labels.cuda()
+                batch_size = labels.shape[0]
+                total_size += batch_size
 
-            # Freeze parameters except BatchNorm
-            with torch.no_grad():
+                
                 features = self.encoder(images)
                 outputs = self.classifier(features)
-            loss = self.loss_function(outputs, labels)
+                loss = self.loss_function(outputs, labels)
 
-            loss_list.append(loss.detach().cpu().item()*batch_size)
-            accuracy = self.accuracy_function(outputs.detach().cpu(), labels.cpu())
-            acc_list.append(accuracy.item()*batch_size)
-        self.lr_scheduler.step()
-        return {
-            'valid loss' : sum(loss_list) / total_size,
-            'valid acc' : sum(acc_list) / total_size,
-        }
+                loss_list.append(loss.detach().cpu().item()*batch_size)
+                accuracy = self.accuracy_function(outputs.detach().cpu(), labels.cpu())
+                acc_list.append(accuracy.item()*batch_size)
+            
+            return {
+                'valid loss' : sum(loss_list) / total_size,
+                'valid acc' : sum(acc_list) / total_size,
+            }
 
     def test(self):
         self.valid_loader = self.test_loader

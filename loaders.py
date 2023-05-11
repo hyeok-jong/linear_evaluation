@@ -14,7 +14,7 @@ class ToRGB(torch.nn.Module):
 
 MEAN = {
     'cifar10': [0.4914, 0.4822, 0.4465],
-    'cifar100': [0.5071, 0.4867, 0.4408],
+    'cifar100': [0.50224, 0.4867, 0.4408],
     'imagenet': [0.485, 0.456, 0.406],
     'food101': [0.485, 0.456, 0.406],
     'aircraft': [0.485, 0.456, 0.406],
@@ -45,14 +45,14 @@ def set_loaders(dataset, batch_size = 256, method = 'string'):
     if method == 'linear':
         train_transform = transforms.Compose([
             # automatically along the shorter side
-            transforms.Resize(71, interpolation = transforms.InterpolationMode.BICUBIC),
-            transforms.CenterCrop(71),
+            transforms.Resize(224, interpolation = transforms.InterpolationMode.BICUBIC),
+            transforms.CenterCrop(224),
             transforms.ToTensor(),
             transforms.Normalize(MEAN[dataset], STD[dataset])
             ])
         test_transform = transforms.Compose([
-            transforms.Resize(71, interpolation = transforms.InterpolationMode.BICUBIC),
-            transforms.CenterCrop(71),            
+            transforms.Resize(224, interpolation = transforms.InterpolationMode.BICUBIC),
+            transforms.CenterCrop(224),            
             transforms.ToTensor(),
             transforms.Normalize(MEAN[dataset], STD[dataset])
             ])
@@ -61,14 +61,14 @@ def set_loaders(dataset, batch_size = 256, method = 'string'):
         train_transform = transforms.Compose([
             # automatically along the shorter side
             transforms.Resize(256, interpolation = transforms.InterpolationMode.BICUBIC),
-            transforms.RandomCrop(71),
+            transforms.RandomCrop(224),
             transforms.RandomHorizontalFlip(p=0.5),
             transforms.ToTensor(),
             transforms.Normalize(MEAN[dataset], STD[dataset])
             ])
         test_transform = transforms.Compose([
             transforms.Resize(256, interpolation = transforms.InterpolationMode.BICUBIC),
-            transforms.CenterCrop(71),            
+            transforms.CenterCrop(224),            
             transforms.ToTensor(),
             transforms.Normalize(MEAN[dataset], STD[dataset])
             ])
@@ -228,15 +228,15 @@ def set_loaders(dataset, batch_size = 256, method = 'string'):
         if method == 'linear':
             train_transform = transforms.Compose([
                 # automatically along the shorter side
-                transforms.Resize(71, interpolation = transforms.InterpolationMode.BICUBIC),
-                transforms.CenterCrop(71),
+                transforms.Resize(224, interpolation = transforms.InterpolationMode.BICUBIC),
+                transforms.CenterCrop(224),
                 transforms.ToTensor(),
                 ToRGB(),
                 transforms.Normalize(MEAN[dataset], STD[dataset])
                 ])
             test_transform = transforms.Compose([
-                transforms.Resize(71, interpolation = transforms.InterpolationMode.BICUBIC),
-                transforms.CenterCrop(71),            
+                transforms.Resize(224, interpolation = transforms.InterpolationMode.BICUBIC),
+                transforms.CenterCrop(224),            
                 transforms.ToTensor(),
                 ToRGB(),
                 transforms.Normalize(MEAN[dataset], STD[dataset])
@@ -246,7 +246,7 @@ def set_loaders(dataset, batch_size = 256, method = 'string'):
             train_transform = transforms.Compose([
                 # automatically along the shorter side
                 transforms.Resize(256, interpolation = transforms.InterpolationMode.BICUBIC),
-                transforms.RandomCrop(71),
+                transforms.RandomCrop(224),
                 transforms.RandomHorizontalFlip(p=0.5),
                 transforms.ToTensor(),
                 ToRGB(),
@@ -254,7 +254,7 @@ def set_loaders(dataset, batch_size = 256, method = 'string'):
                 ])
             test_transform = transforms.Compose([
                 transforms.Resize(256, interpolation = transforms.InterpolationMode.BICUBIC),
-                transforms.CenterCrop(71),            
+                transforms.CenterCrop(224),            
                 transforms.ToTensor(),
                 ToRGB(),
                 transforms.Normalize(MEAN[dataset], STD[dataset])

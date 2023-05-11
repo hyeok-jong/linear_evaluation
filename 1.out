@@ -1,0 +1,284 @@
+Running with --dataset caltech101 and --method linear
+wandb: Currently logged in as: hyeokjong. Use `wandb login --relogin` to force relogin
+wandb: wandb version 0.15.2 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.14.2
+wandb: Run data is saved locally in /home/mskang/linear_evaluation/wandb/run-20230510_224700-n1ci01cs
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run [caltech101][linear][2023-05-10 22:46:52]
+wandb: ⭐️ View project at https://wandb.ai/hyeokjong/%5BLinear%20Evaluation%5D
+wandb: 🚀 View run at https://wandb.ai/hyeokjong/%5BLinear%20Evaluation%5D/runs/n1ci01cs
+wandb: WARNING Calling wandb.run.save without any arguments is deprecated.Changes to attributes are automatically persisted.
+Namespace(model_path='./supcon.pth', dataset='caltech101', method='linear', epochs=1, batch_size=32, wandb_entity='hyeokjong', wandb_project='[Linear Evaluation]', short='[caltech101][linear][2023-05-10 22:46:52]')
+Files already downloaded and verified
+7809 245
+868 28
+868 28
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:17<00:00, 17.49s/it]100%|██████████| 1/1 [00:17<00:00, 17.49s/it]
+train loss 2.709173080755999
+train acc 0.47637341529004995
+valid loss 1.976211721446657
+valid acc 0.652073732718894
+learning rate 0.0
+True
+False
+wandb: Waiting for W&B process to finish... (success).
+wandb: 
+wandb: Run history:
+wandb: learning rate ▁
+wandb:      test acc ▁
+wandb:     test loss ▁
+wandb:     train acc ▁
+wandb:    train loss ▁
+wandb:     valid acc ▁
+wandb:    valid loss ▁
+wandb: 
+wandb: Run summary:
+wandb: learning rate 0.0
+wandb:      test acc 0.65207
+wandb:     test loss 1.97621
+wandb:     train acc 0.47637
+wandb:    train loss 2.70917
+wandb:     valid acc 0.65207
+wandb:    valid loss 1.97621
+wandb: 
+wandb: 🚀 View run [caltech101][linear][2023-05-10 22:46:52] at: https://wandb.ai/hyeokjong/%5BLinear%20Evaluation%5D/runs/n1ci01cs
+wandb: Synced 6 W&B file(s), 0 media file(s), 2 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20230510_224700-n1ci01cs/logs
+{'test loss': 1.976211721446657, 'test acc': 0.652073732718894}
+Running with --dataset flowers and --method linear
+wandb: Currently logged in as: hyeokjong. Use `wandb login --relogin` to force relogin
+wandb: wandb version 0.15.2 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.14.2
+wandb: Run data is saved locally in /home/mskang/linear_evaluation/wandb/run-20230510_224751-t93xfle9
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run [flowers][linear][2023-05-10 22:47:44]
+wandb: ⭐️ View project at https://wandb.ai/hyeokjong/%5BLinear%20Evaluation%5D
+wandb: 🚀 View run at https://wandb.ai/hyeokjong/%5BLinear%20Evaluation%5D/runs/t93xfle9
+wandb: WARNING Calling wandb.run.save without any arguments is deprecated.Changes to attributes are automatically persisted.
+Namespace(model_path='./supcon.pth', dataset='flowers', method='linear', epochs=1, batch_size=32, wandb_entity='hyeokjong', wandb_project='[Linear Evaluation]', short='[flowers][linear][2023-05-10 22:47:44]')
+1020 32
+1020 32
+1020 32
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:12<00:00, 12.52s/it]100%|██████████| 1/1 [00:12<00:00, 12.52s/it]
+train loss 4.585327786090327
+train acc 0.039215686303727765
+valid loss 4.435176045286889
+valid acc 0.25588235294117645
+learning rate 0.0
+True
+False
+wandb: Waiting for W&B process to finish... (success).
+wandb: 
+wandb: Run history:
+wandb: learning rate ▁
+wandb:      test acc ▁
+wandb:     test loss ▁
+wandb:     train acc ▁
+wandb:    train loss ▁
+wandb:     valid acc ▁
+wandb:    valid loss ▁
+wandb: 
+wandb: Run summary:
+wandb: learning rate 0.0
+wandb:      test acc 0.25588
+wandb:     test loss 4.43518
+wandb:     train acc 0.03922
+wandb:    train loss 4.58533
+wandb:     valid acc 0.25588
+wandb:    valid loss 4.43518
+wandb: 
+wandb: 🚀 View run [flowers][linear][2023-05-10 22:47:44] at: https://wandb.ai/hyeokjong/%5BLinear%20Evaluation%5D/runs/t93xfle9
+wandb: Synced 6 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20230510_224751-t93xfle9/logs
+{'test loss': 4.435176045286889, 'test acc': 0.25588235294117645}
+Running with --dataset sun and --method linear
+wandb: Currently logged in as: hyeokjong. Use `wandb login --relogin` to force relogin
+wandb: wandb version 0.15.2 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.14.2
+wandb: Run data is saved locally in /home/mskang/linear_evaluation/wandb/run-20230510_224849-raxvrf4a
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run [sun][linear][2023-05-10 22:48:34]
+wandb: ⭐️ View project at https://wandb.ai/hyeokjong/%5BLinear%20Evaluation%5D
+wandb: 🚀 View run at https://wandb.ai/hyeokjong/%5BLinear%20Evaluation%5D/runs/raxvrf4a
+wandb: WARNING Calling wandb.run.save without any arguments is deprecated.Changes to attributes are automatically persisted.
+Namespace(model_path='./supcon.pth', dataset='sun', method='linear', epochs=1, batch_size=32, wandb_entity='hyeokjong', wandb_project='[Linear Evaluation]', short='[sun][linear][2023-05-10 22:48:34]')
+97878 3059
+10876 340
+10876 340
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [22:12<00:00, 1332.56s/it]100%|██████████| 1/1 [22:12<00:00, 1332.56s/it]
+train loss 4.436223008070021
+train acc 0.21342896258851243
+valid loss 4.035696221257274
+valid acc 0.2528503126039712
+learning rate 0.0
+True
+False
+wandb: Waiting for W&B process to finish... (success).
+wandb: 
+wandb: Run history:
+wandb: learning rate ▁
+wandb:      test acc ▁
+wandb:     test loss ▁
+wandb:     train acc ▁
+wandb:    train loss ▁
+wandb:     valid acc ▁
+wandb:    valid loss ▁
+wandb: 
+wandb: Run summary:
+wandb: learning rate 0.0
+wandb:      test acc 0.25285
+wandb:     test loss 4.0357
+wandb:     train acc 0.21343
+wandb:    train loss 4.43622
+wandb:     valid acc 0.25285
+wandb:    valid loss 4.0357
+wandb: 
+wandb: 🚀 View run [sun][linear][2023-05-10 22:48:34] at: https://wandb.ai/hyeokjong/%5BLinear%20Evaluation%5D/runs/raxvrf4a
+wandb: Synced 6 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20230510_224849-raxvrf4a/logs
+{'test loss': 4.035696221257274, 'test acc': 0.2528503126039712}
+Running with --dataset caltech101 and --method finetune
+wandb: Currently logged in as: hyeokjong. Use `wandb login --relogin` to force relogin
+wandb: wandb version 0.15.2 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.14.2
+wandb: Run data is saved locally in /home/mskang/linear_evaluation/wandb/run-20230510_231332-schit8cl
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run [caltech101][finetune][2023-05-10 23:13:25]
+wandb: ⭐️ View project at https://wandb.ai/hyeokjong/%5BLinear%20Evaluation%5D
+wandb: 🚀 View run at https://wandb.ai/hyeokjong/%5BLinear%20Evaluation%5D/runs/schit8cl
+wandb: WARNING Calling wandb.run.save without any arguments is deprecated.Changes to attributes are automatically persisted.
+Namespace(model_path='./supcon.pth', dataset='caltech101', method='finetune', epochs=1, batch_size=32, wandb_entity='hyeokjong', wandb_project='[Linear Evaluation]', short='[caltech101][finetune][2023-05-10 23:13:25]')
+Files already downloaded and verified
+7809 245
+868 28
+868 28
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:22<00:00, 22.03s/it]100%|██████████| 1/1 [00:22<00:00, 22.03s/it]
+train loss 3.788359554709416
+train acc 0.20898962735305418
+valid loss 3.444237785954629
+valid acc 0.25
+learning rate 0.0
+False
+False
+wandb: Waiting for W&B process to finish... (success).
+wandb: 
+wandb: Run history:
+wandb: learning rate ▁
+wandb:      test acc ▁
+wandb:     test loss ▁
+wandb:     train acc ▁
+wandb:    train loss ▁
+wandb:     valid acc ▁
+wandb:    valid loss ▁
+wandb: 
+wandb: Run summary:
+wandb: learning rate 0.0
+wandb:      test acc 0.25
+wandb:     test loss 3.44424
+wandb:     train acc 0.20899
+wandb:    train loss 3.78836
+wandb:     valid acc 0.25
+wandb:    valid loss 3.44424
+wandb: 
+wandb: 🚀 View run [caltech101][finetune][2023-05-10 23:13:25] at: https://wandb.ai/hyeokjong/%5BLinear%20Evaluation%5D/runs/schit8cl
+wandb: Synced 6 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20230510_231332-schit8cl/logs
+{'test loss': 3.444237785954629, 'test acc': 0.25}
+Running with --dataset flowers and --method finetune
+wandb: Currently logged in as: hyeokjong. Use `wandb login --relogin` to force relogin
+wandb: wandb version 0.15.2 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.14.2
+wandb: Run data is saved locally in /home/mskang/linear_evaluation/wandb/run-20230510_231425-6t4e4khl
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run [flowers][finetune][2023-05-10 23:14:18]
+wandb: ⭐️ View project at https://wandb.ai/hyeokjong/%5BLinear%20Evaluation%5D
+wandb: 🚀 View run at https://wandb.ai/hyeokjong/%5BLinear%20Evaluation%5D/runs/6t4e4khl
+wandb: WARNING Calling wandb.run.save without any arguments is deprecated.Changes to attributes are automatically persisted.
+Namespace(model_path='./supcon.pth', dataset='flowers', method='finetune', epochs=1, batch_size=32, wandb_entity='hyeokjong', wandb_project='[Linear Evaluation]', short='[flowers][finetune][2023-05-10 23:14:18]')
+1020 32
+1020 32
+1020 32
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:14<00:00, 14.13s/it]100%|██████████| 1/1 [00:14<00:00, 14.13s/it]
+train loss 4.62584898892571
+train acc 0.006862745098039216
+valid loss 10.178915457632028
+valid acc 0.010784313725490196
+learning rate 0.0
+False
+False
+wandb: Waiting for W&B process to finish... (success).
+wandb: 
+wandb: Run history:
+wandb: learning rate ▁
+wandb:      test acc ▁
+wandb:     test loss ▁
+wandb:     train acc ▁
+wandb:    train loss ▁
+wandb:     valid acc ▁
+wandb:    valid loss ▁
+wandb: 
+wandb: Run summary:
+wandb: learning rate 0.0
+wandb:      test acc 0.01078
+wandb:     test loss 10.17892
+wandb:     train acc 0.00686
+wandb:    train loss 4.62585
+wandb:     valid acc 0.01078
+wandb:    valid loss 10.17892
+wandb: 
+wandb: 🚀 View run [flowers][finetune][2023-05-10 23:14:18] at: https://wandb.ai/hyeokjong/%5BLinear%20Evaluation%5D/runs/6t4e4khl
+wandb: Synced 6 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20230510_231425-6t4e4khl/logs
+{'test loss': 10.178915457632028, 'test acc': 0.010784313725490196}
+Running with --dataset sun and --method finetune
+wandb: Currently logged in as: hyeokjong. Use `wandb login --relogin` to force relogin
+wandb: wandb version 0.15.2 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.14.2
+wandb: Run data is saved locally in /home/mskang/linear_evaluation/wandb/run-20230510_231514-f0gbonaw
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run [sun][finetune][2023-05-10 23:15:05]
+wandb: ⭐️ View project at https://wandb.ai/hyeokjong/%5BLinear%20Evaluation%5D
+wandb: 🚀 View run at https://wandb.ai/hyeokjong/%5BLinear%20Evaluation%5D/runs/f0gbonaw
+wandb: WARNING Calling wandb.run.save without any arguments is deprecated.Changes to attributes are automatically persisted.
+Namespace(model_path='./supcon.pth', dataset='sun', method='finetune', epochs=1, batch_size=32, wandb_entity='hyeokjong', wandb_project='[Linear Evaluation]', short='[sun][finetune][2023-05-10 23:15:05]')
+97878 3059
+10876 340
+10876 340
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [21:50<00:00, 1310.99s/it]100%|██████████| 1/1 [21:50<00:00, 1310.99s/it]
+train loss 5.158398998185824
+train acc 0.051339422547348815
+valid loss 5.235572515580969
+valid acc 0.04431776388652099
+learning rate 0.0
+False
+False
+wandb: Waiting for W&B process to finish... (success).
+wandb: - 0.005 MB of 0.005 MB uploaded (0.000 MB deduped)wandb: \ 0.005 MB of 0.014 MB uploaded (0.000 MB deduped)wandb: | 0.005 MB of 0.014 MB uploaded (0.000 MB deduped)wandb: / 0.014 MB of 0.014 MB uploaded (0.000 MB deduped)wandb: - 0.014 MB of 0.014 MB uploaded (0.000 MB deduped)wandb: 
+wandb: Run history:
+wandb: learning rate ▁
+wandb:      test acc ▁
+wandb:     test loss ▁
+wandb:     train acc ▁
+wandb:    train loss ▁
+wandb:     valid acc ▁
+wandb:    valid loss ▁
+wandb: 
+wandb: Run summary:
+wandb: learning rate 0.0
+wandb:      test acc 0.04432
+wandb:     test loss 5.23557
+wandb:     train acc 0.05134
+wandb:    train loss 5.1584
+wandb:     valid acc 0.04432
+wandb:    valid loss 5.23557
+wandb: 
+wandb: 🚀 View run [sun][finetune][2023-05-10 23:15:05] at: https://wandb.ai/hyeokjong/%5BLinear%20Evaluation%5D/runs/f0gbonaw
+wandb: Synced 6 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20230510_231514-f0gbonaw/logs
+{'test loss': 5.235572515580969, 'test acc': 0.04431776388652099}

@@ -1,0 +1,982 @@
+wandb: Currently logged in as: hyeokjong. Use `wandb login --relogin` to force relogin
+wandb: wandb version 0.15.2 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.14.2
+wandb: Run data is saved locally in /home/mskang/linear_evaluation/wandb/run-20230511_030625-qopg97cb
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run [cifar100][finetune][2023-05-11 03:06:13]
+wandb: ⭐️ View project at https://wandb.ai/hyeokjong/%5BLinear%20Evaluation%5D
+wandb: 🚀 View run at https://wandb.ai/hyeokjong/%5BLinear%20Evaluation%5D/runs/qopg97cb
+wandb: WARNING Calling wandb.run.save without any arguments is deprecated.Changes to attributes are automatically persisted.
+Namespace(model_path='./supcon.pth', dataset='cifar100', method='finetune', epochs=200, batch_size=128, wandb_entity='hyeokjong', wandb_project='[Linear Evaluation]', short='[cifar100][finetune][2023-05-11 03:06:13]')
+Files already downloaded and verified
+Files already downloaded and verified
+50000 391
+0 0
+10000 79
+  0%|          | 0/200 [00:00<?, ?it/s]  0%|          | 1/200 [04:05<13:34:54, 245.70s/it]train loss 2.8736292057800292
+train acc 0.2750599999809265
+valid loss 3.022708364105225
+valid acc 0.2889
+learning rate 0.09999383162408304
+False
+False
+  1%|          | 2/200 [08:14<13:36:28, 247.42s/it]train loss 1.9042842306137084
+train acc 0.46891999999046324
+valid loss 2.2271625221252442
+valid acc 0.4146
+learning rate 0.09997532801828658
+False
+False
+  2%|▏         | 3/200 [12:20<13:30:18, 246.79s/it]train loss 1.6147198882675171
+train acc 0.5404000000381469
+valid loss 2.3569688804626465
+valid acc 0.4136
+learning rate 0.09994449374809851
+False
+False
+  2%|▏         | 4/200 [16:27<13:26:45, 246.97s/it]train loss 1.4510965269088745
+train acc 0.5822599999809265
+valid loss 1.9651164726257324
+valid acc 0.4778
+learning rate 0.09990133642141359
+False
+False
+  2%|▎         | 5/200 [20:37<13:25:31, 247.85s/it]train loss 1.3467051370620728
+train acc 0.6105800000190735
+valid loss 1.69440051612854
+valid acc 0.5346
+learning rate 0.09984586668665642
+False
+False
+  3%|▎         | 6/200 [24:44<13:20:48, 247.67s/it]train loss 1.254992963294983
+train acc 0.6348799999618531
+valid loss 1.663880118751526
+valid acc 0.5359
+learning rate 0.09977809823015402
+False
+False
+  4%|▎         | 7/200 [28:50<13:15:18, 247.25s/it]train loss 1.1864502769088745
+train acc 0.6517799999809265
+valid loss 2.237849764251709
+valid acc 0.4612
+learning rate 0.09969804777275901
+False
+False
+  4%|▍         | 8/200 [32:58<13:11:36, 247.38s/it]train loss 1.1355906667327882
+train acc 0.6644800000190735
+valid loss 1.7249254344940186
+valid acc 0.539
+learning rate 0.09960573506572391
+False
+False
+  4%|▍         | 9/200 [37:05<13:07:12, 247.29s/it]train loss 1.0988775224494933
+train acc 0.6748799999809265
+valid loss 1.7673021768569945
+valid acc 0.5308
+learning rate 0.09950118288582789
+False
+False
+  5%|▌         | 10/200 [41:10<13:01:16, 246.72s/it]train loss 1.055544761428833
+train acc 0.6850600000381469
+valid loss 1.8653694194793702
+valid acc 0.5119
+learning rate 0.09938441702975691
+False
+False
+  6%|▌         | 11/200 [45:17<12:56:57, 246.65s/it]train loss 1.0241536435699463
+train acc 0.69672
+valid loss 1.9059509288787841
+valid acc 0.5207
+learning rate 0.09925546630773871
+False
+False
+  6%|▌         | 12/200 [49:23<12:52:34, 246.57s/it]train loss 0.9944502751159668
+train acc 0.7020799999809265
+valid loss 2.0895019905090333
+valid acc 0.4595
+learning rate 0.09911436253643445
+False
+False
+  6%|▋         | 13/200 [53:27<12:45:56, 245.76s/it]train loss 0.9559419823837281
+train acc 0.7120400000190735
+valid loss 2.243405387878418
+valid acc 0.4866
+learning rate 0.0989611405310883
+False
+False
+  7%|▋         | 14/200 [57:33<12:41:41, 245.71s/it]train loss 0.9511291402053833
+train acc 0.7152599999618531
+valid loss 1.7497945384979248
+valid acc 0.5511
+learning rate 0.09879583809693739
+False
+False
+  8%|▊         | 15/200 [1:01:38<12:37:08, 245.56s/it]train loss 0.9161402680969238
+train acc 0.723880000038147
+valid loss 1.6765599184036255
+valid acc 0.5543
+learning rate 0.09861849601988384
+False
+False
+  8%|▊         | 16/200 [1:05:43<12:32:05, 245.25s/it]train loss 0.9014662196731568
+train acc 0.727320000038147
+valid loss 2.5449013885498046
+valid acc 0.4118
+learning rate 0.09842915805643157
+False
+False
+  8%|▊         | 17/200 [1:09:49<12:29:09, 245.62s/it]train loss 0.8815938472366333
+train acc 0.732180000038147
+valid loss 1.6323126888275146
+valid acc 0.5723
+learning rate 0.09822787092288993
+False
+False
+  9%|▉         | 18/200 [1:13:54<12:24:26, 245.42s/it]train loss 0.8638217446517944
+train acc 0.74032
+valid loss 1.6653731143951416
+valid acc 0.56
+learning rate 0.09801468428384717
+False
+False
+ 10%|▉         | 19/200 [1:18:01<12:21:49, 245.91s/it]train loss 0.8567910745620727
+train acc 0.740820000038147
+valid loss 1.9077569034576416
+valid acc 0.5224
+learning rate 0.09778965073991652
+False
+False
+ 10%|█         | 20/200 [1:22:06<12:16:41, 245.56s/it]train loss 0.833393445148468
+train acc 0.74716
+valid loss 1.8757215028762817
+valid acc 0.5209
+learning rate 0.0975528258147577
+False
+False
+ 10%|█         | 21/200 [1:26:12<12:13:29, 245.86s/it]train loss 0.8249265361785889
+train acc 0.75078
+valid loss 2.2980091899871824
+valid acc 0.4749
+learning rate 0.09730426794137728
+False
+False
+ 11%|█         | 22/200 [1:30:18<12:09:09, 245.79s/it]train loss 0.8130320524978638
+train acc 0.755939999961853
+valid loss 1.7559583713531495
+valid acc 0.5393
+learning rate 0.09704403844771128
+False
+False
+ 12%|█▏        | 23/200 [1:34:25<12:05:58, 246.10s/it]train loss 0.8059350799369812
+train acc 0.7561999999809265
+valid loss 1.8457243339538574
+valid acc 0.5217
+learning rate 0.09677220154149338
+False
+False
+ 12%|█▏        | 24/200 [1:38:31<12:01:39, 246.02s/it]train loss 0.7914842077636719
+train acc 0.7617600000190735
+valid loss 1.7906801048278809
+valid acc 0.5471
+learning rate 0.09648882429441258
+False
+False
+ 12%|█▎        | 25/200 [1:42:36<11:57:17, 245.93s/it]train loss 0.7797713171958923
+train acc 0.764740000038147
+valid loss 1.9282791542053224
+valid acc 0.524
+learning rate 0.09619397662556435
+False
+False
+ 13%|█▎        | 26/200 [1:46:42<11:52:43, 245.77s/it]train loss 0.775467396850586
+train acc 0.7648799999809265
+valid loss 2.232728454399109
+valid acc 0.478
+learning rate 0.09588773128419906
+False
+False
+ 14%|█▎        | 27/200 [1:50:46<11:47:34, 245.40s/it]train loss 0.7652820887565612
+train acc 0.766619999961853
+valid loss 2.4670060554504394
+valid acc 0.4441
+learning rate 0.09557016383177226
+False
+False
+ 14%|█▍        | 28/200 [1:54:50<11:41:55, 244.86s/it]train loss 0.7418107446670532
+train acc 0.7754199999618531
+valid loss 2.123801476097107
+valid acc 0.5059
+learning rate 0.09524135262330098
+False
+False
+ 14%|█▍        | 29/200 [1:58:55<11:38:17, 245.01s/it]train loss 0.7488607747459411
+train acc 0.7728800000381469
+valid loss 1.78942446975708
+valid acc 0.5378
+learning rate 0.09490137878803079
+False
+False
+ 15%|█▌        | 30/200 [2:03:01<11:34:39, 245.17s/it]train loss 0.7215758029174805
+train acc 0.78238
+valid loss 2.089965137863159
+valid acc 0.5107
+learning rate 0.0945503262094184
+False
+False
+ 16%|█▌        | 31/200 [2:07:07<11:31:21, 245.45s/it]train loss 0.7310061085891724
+train acc 0.7776000000190735
+valid loss 1.7343748231887817
+valid acc 0.5646
+learning rate 0.0941882815044347
+False
+False
+ 16%|█▌        | 32/200 [2:11:11<11:26:16, 245.10s/it]train loss 0.7221977390289307
+train acc 0.77996
+valid loss 1.739712661743164
+valid acc 0.5702
+learning rate 0.09381533400219319
+False
+False
+ 16%|█▋        | 33/200 [2:15:17<11:22:49, 245.32s/it]train loss 0.7053050572586059
+train acc 0.7856399999618531
+valid loss 1.9165880294799804
+valid acc 0.5272
+learning rate 0.09343157572190958
+False
+False
+ 17%|█▋        | 34/200 [2:19:23<11:19:08, 245.47s/it]train loss 0.6934995906448365
+train acc 0.79014
+valid loss 1.7895051235198975
+valid acc 0.5529
+learning rate 0.0930371013501972
+False
+False
+ 18%|█▊        | 35/200 [2:23:29<11:16:03, 245.84s/it]train loss 0.6858628871726989
+train acc 0.7924600000190735
+valid loss 1.9264950790405273
+valid acc 0.5202
+learning rate 0.09263200821770463
+False
+False
+ 18%|█▊        | 36/200 [2:27:36<11:12:12, 245.93s/it]train loss 0.6803228105545044
+train acc 0.793920000038147
+valid loss 1.9150932010650634
+valid acc 0.5228
+learning rate 0.09221639627510078
+False
+False
+ 18%|█▊        | 37/200 [2:31:42<11:08:44, 246.16s/it]train loss 0.6725502008056641
+train acc 0.79724
+valid loss 2.177679233932495
+valid acc 0.4941
+learning rate 0.09179036806841355
+False
+False
+ 19%|█▉        | 38/200 [2:35:49<11:04:51, 246.24s/it]train loss 0.673155132637024
+train acc 0.7950600000381469
+valid loss 2.2003698989868163
+valid acc 0.504
+learning rate 0.09135402871372812
+False
+False
+ 20%|█▉        | 39/200 [2:39:55<11:00:56, 246.31s/it]train loss 0.6534193532943725
+train acc 0.8007599999809265
+valid loss 2.272288171005249
+valid acc 0.4798
+learning rate 0.0909074858712512
+False
+False
+ 20%|██        | 40/200 [2:44:03<10:57:59, 246.75s/it]train loss 0.6453418756675721
+train acc 0.8022799999618531
+valid loss 2.617166470336914
+valid acc 0.4531
+learning rate 0.09045084971874741
+False
+False
+ 20%|██        | 41/200 [2:48:09<10:52:57, 246.40s/it]train loss 0.634636613292694
+train acc 0.807299999961853
+valid loss 1.9110527156829833
+valid acc 0.5349
+learning rate 0.08998423292435458
+False
+False
+ 21%|██        | 42/200 [2:52:16<10:49:32, 246.66s/it]train loss 0.6391150537490845
+train acc 0.804999999961853
+valid loss 1.9681867126464845
+valid acc 0.5413
+learning rate 0.08950775061878455
+False
+False
+ 22%|██▏       | 43/200 [2:56:20<10:43:48, 246.04s/it]train loss 0.6149967355155945
+train acc 0.8145999999618531
+valid loss 2.011646569442749
+valid acc 0.5076
+learning rate 0.08902152036691653
+False
+False
+ 22%|██▏       | 44/200 [3:00:27<10:39:48, 246.08s/it]train loss 0.6236200494003296
+train acc 0.810660000038147
+valid loss 2.6738080352783204
+valid acc 0.4551
+learning rate 0.08852566213878951
+False
+False
+ 22%|██▎       | 45/200 [3:04:31<10:34:39, 245.67s/it]train loss 0.6013291896247864
+train acc 0.8169000000190735
+valid loss 2.340842555999756
+valid acc 0.4728
+learning rate 0.0880202982800016
+False
+False
+ 23%|██▎       | 46/200 [3:08:40<10:32:57, 246.61s/it]train loss 0.6032789801025391
+train acc 0.8151199999809265
+valid loss 1.8880719886779784
+valid acc 0.5362
+learning rate 0.08750555348152303
+False
+False
+ 24%|██▎       | 47/200 [3:12:46<10:27:55, 246.24s/it]train loss 0.5907007865524292
+train acc 0.8196000000381469
+valid loss 1.8683679723739623
+valid acc 0.5399
+learning rate 0.08698155474893052
+False
+False
+ 24%|██▍       | 48/200 [3:16:53<10:24:29, 246.51s/it]train loss 0.590527730140686
+train acc 0.8228199999618531
+valid loss 2.0139992542266847
+valid acc 0.5094
+learning rate 0.08644843137107061
+False
+False
+ 24%|██▍       | 49/200 [3:20:58<10:19:35, 246.19s/it]train loss 0.5767633235168457
+train acc 0.8247200000190735
+valid loss 2.20603072013855
+valid acc 0.4862
+learning rate 0.08590631488815947
+False
+False
+ 25%|██▌       | 50/200 [3:25:03<10:14:52, 245.95s/it]train loss 0.5718322955703735
+train acc 0.82742
+valid loss 2.060005138969421
+valid acc 0.5127
+learning rate 0.0853553390593274
+False
+False
+ 26%|██▌       | 51/200 [3:29:11<10:11:53, 246.40s/it]train loss 0.5698857249832153
+train acc 0.8300800000190734
+valid loss 1.8218294565200805
+valid acc 0.5425
+learning rate 0.08479563982961574
+False
+False
+ 26%|██▌       | 52/200 [3:33:17<10:07:25, 246.26s/it]train loss 0.5465836418914795
+train acc 0.833839999961853
+valid loss 2.2346243747711183
+valid acc 0.5123
+learning rate 0.08422735529643446
+False
+False
+ 26%|██▋       | 53/200 [3:37:24<10:04:11, 246.61s/it]train loss 0.5473429921340942
+train acc 0.834559999961853
+valid loss 2.0013275077819825
+valid acc 0.5296
+learning rate 0.08365062567548869
+False
+False
+ 27%|██▋       | 54/200 [3:41:30<9:59:17, 246.28s/it] train loss 0.5494183753585815
+train acc 0.8330199999809265
+valid loss 1.7808041904449463
+valid acc 0.5562
+learning rate 0.08306559326618261
+False
+False
+ 28%|██▊       | 55/200 [3:45:35<9:54:17, 245.92s/it]train loss 0.5199833177947998
+train acc 0.841720000038147
+valid loss 2.1259951585769654
+valid acc 0.4873
+learning rate 0.0824724024165092
+False
+False
+ 28%|██▊       | 56/200 [3:49:41<9:50:02, 245.85s/it]train loss 0.5292449548149109
+train acc 0.839420000038147
+valid loss 1.8505668384552
+valid acc 0.5509
+learning rate 0.0818711994874345
+False
+False
+ 28%|██▊       | 57/200 [3:53:45<9:44:48, 245.37s/it]train loss 0.5161317912864685
+train acc 0.8413799999809265
+valid loss 2.101372774505615
+valid acc 0.5272
+learning rate 0.08126213281678528
+False
+False
+ 29%|██▉       | 58/200 [3:57:51<9:41:17, 245.61s/it]train loss 0.5208670778846741
+train acc 0.841599999961853
+valid loss 2.257555239868164
+valid acc 0.4838
+learning rate 0.08064535268264884
+False
+False
+ 30%|██▉       | 59/200 [4:01:58<9:38:27, 246.15s/it]train loss 0.4951057810592651
+train acc 0.847999999961853
+valid loss 1.9987347949981689
+valid acc 0.5329
+learning rate 0.08002101126629421
+False
+False
+ 30%|███       | 60/200 [4:06:05<9:34:22, 246.16s/it]train loss 0.4745034776496887
+train acc 0.856279999961853
+valid loss 2.0981888437271117
+valid acc 0.5243
+learning rate 0.07938926261462367
+False
+False
+ 30%|███       | 61/200 [4:10:11<9:30:36, 246.31s/it]train loss 0.5035721933746338
+train acc 0.848219999961853
+valid loss 2.4900064193725586
+valid acc 0.4695
+learning rate 0.07875026260216395
+False
+False
+ 31%|███       | 62/200 [4:14:16<9:25:35, 245.91s/it]train loss 0.4874107737350464
+train acc 0.8520000000190735
+valid loss 2.2038130506515503
+valid acc 0.5075
+learning rate 0.07810416889260656
+False
+False
+ 32%|███▏      | 63/200 [4:18:24<9:22:52, 246.52s/it]train loss 0.45999201395988465
+train acc 0.862180000038147
+valid loss 1.9516180919647217
+valid acc 0.5392
+learning rate 0.07745114089990661
+False
+False
+ 32%|███▏      | 64/200 [4:22:29<9:17:28, 245.94s/it]train loss 0.4701954383468628
+train acc 0.856480000038147
+valid loss 2.372662173461914
+valid acc 0.4816
+learning rate 0.07679133974894985
+False
+False
+ 32%|███▎      | 65/200 [4:26:34<9:13:02, 245.80s/it]train loss 0.461154288187027
+train acc 0.8607800000381469
+valid loss 2.1917678382873533
+valid acc 0.4938
+learning rate 0.07612492823579746
+False
+False
+ 33%|███▎      | 66/200 [4:30:40<9:08:57, 245.80s/it]train loss 0.44659672481536866
+train acc 0.864619999961853
+valid loss 2.4722838817596435
+valid acc 0.4853
+learning rate 0.07545207078751859
+False
+False
+ 34%|███▎      | 67/200 [4:34:47<9:05:38, 246.15s/it]train loss 0.4326537961578369
+train acc 0.869519999961853
+valid loss 2.0636268493652343
+valid acc 0.522
+learning rate 0.0747729334216204
+False
+False
+ 34%|███▍      | 68/200 [4:38:51<9:00:19, 245.60s/it]train loss 0.42892958614349364
+train acc 0.8681599999809265
+valid loss 2.2832915935516356
+valid acc 0.4975
+learning rate 0.07408768370508578
+False
+False
+ 34%|███▍      | 69/200 [4:42:55<8:55:06, 245.09s/it]train loss 0.4295696287536621
+train acc 0.870500000038147
+valid loss 2.135135080718994
+valid acc 0.5185
+learning rate 0.0733964907130287
+False
+False
+ 35%|███▌      | 70/200 [4:47:03<8:52:41, 245.86s/it]train loss 0.41057916124343874
+train acc 0.8771600000190735
+valid loss 2.407431608581543
+valid acc 0.4938
+learning rate 0.07269952498697736
+False
+False
+ 36%|███▌      | 71/200 [4:51:09<8:48:31, 245.83s/it]train loss 0.4175843480682373
+train acc 0.8736799999618531
+valid loss 1.9607984565734864
+valid acc 0.5465
+learning rate 0.07199695849279578
+False
+False
+ 36%|███▌      | 72/200 [4:55:15<8:44:54, 246.05s/it]train loss 0.3949276578521729
+train acc 0.8810999999809265
+valid loss 2.288681844329834
+valid acc 0.4982
+learning rate 0.07128896457825366
+False
+False
+ 36%|███▋      | 73/200 [4:59:22<8:41:07, 246.20s/it]train loss 0.40695041197776793
+train acc 0.876760000038147
+valid loss 2.1937217361450196
+valid acc 0.5144
+learning rate 0.07057571793025548
+False
+False
+ 37%|███▋      | 74/200 [5:03:28<8:36:57, 246.17s/it]train loss 0.3934655337905884
+train acc 0.8819599999809266
+valid loss 2.0716391941070555
+valid acc 0.5258
+learning rate 0.06985739453173906
+False
+False
+ 38%|███▊      | 75/200 [5:07:36<8:34:01, 246.73s/it]train loss 0.3776021586894989
+train acc 0.8870199999809265
+valid loss 2.3175718811035155
+valid acc 0.4917
+learning rate 0.06913417161825453
+False
+False
+ 38%|███▊      | 76/200 [5:11:43<8:30:12, 246.88s/it]train loss 0.3931781525230408
+train acc 0.88046
+valid loss 2.358187241744995
+valid acc 0.4992
+learning rate 0.06840622763423394
+False
+False
+ 38%|███▊      | 77/200 [5:15:51<8:26:34, 247.11s/it]train loss 0.3627415793991089
+train acc 0.8911200000190734
+valid loss 2.1779474948883055
+valid acc 0.5267
+learning rate 0.0676737421889629
+False
+False
+ 39%|███▉      | 78/200 [5:19:56<8:21:12, 246.49s/it]train loss 0.367282466917038
+train acc 0.8907399999809266
+valid loss 2.405334733963013
+valid acc 0.4935
+learning rate 0.06693689601226462
+False
+False
+ 40%|███▉      | 79/200 [5:24:03<8:17:15, 246.58s/it]train loss 0.3629620366859436
+train acc 0.89126
+valid loss 2.067354996109009
+valid acc 0.5256
+learning rate 0.06619587090990751
+False
+False
+ 40%|████      | 80/200 [5:28:09<8:13:06, 246.55s/it]train loss 0.32873153367996216
+train acc 0.9026400000381469
+valid loss 1.8759973609924316
+valid acc 0.5416
+learning rate 0.06545084971874741
+False
+False
+ 40%|████      | 81/200 [5:32:13<8:07:33, 245.83s/it]train loss 0.3338525752449036
+train acc 0.90024
+valid loss 1.9360028070449828
+valid acc 0.548
+learning rate 0.06470201626161524
+False
+False
+ 41%|████      | 82/200 [5:36:19<8:03:21, 245.78s/it]train loss 0.32938772623062135
+train acc 0.90094
+valid loss 2.301127759552002
+valid acc 0.5002
+learning rate 0.06394955530196152
+False
+False
+ 42%|████▏     | 83/200 [5:40:25<7:59:18, 245.80s/it]train loss 0.3549473501968384
+train acc 0.894400000038147
+valid loss 2.2177005840301516
+valid acc 0.528
+learning rate 0.06319365249826868
+False
+False
+ 42%|████▏     | 84/200 [5:44:31<7:55:23, 245.89s/it]train loss 0.3158977318286896
+train acc 0.9059600000190735
+valid loss 2.2094782917022706
+valid acc 0.5142
+learning rate 0.06243449435824277
+False
+False
+ 42%|████▎     | 85/200 [5:48:38<7:52:12, 246.37s/it]train loss 0.30642547832489014
+train acc 0.908220000038147
+valid loss 1.9665537300109863
+valid acc 0.5388
+learning rate 0.06167226819279532
+False
+False
+ 43%|████▎     | 86/200 [5:52:45<7:48:00, 246.32s/it]train loss 0.31003248476028444
+train acc 0.908159999961853
+valid loss 2.3561789878845216
+valid acc 0.5123
+learning rate 0.06090716206982718
+False
+False
+ 44%|████▎     | 87/200 [5:56:50<7:43:11, 245.94s/it]train loss 0.3107721172523499
+train acc 0.90972
+valid loss 2.11462059173584
+valid acc 0.5288
+learning rate 0.06013936476782568
+False
+False
+ 44%|████▍     | 88/200 [6:00:56<7:39:08, 245.97s/it]train loss 0.295183136548996
+train acc 0.91278
+valid loss 2.240664847946167
+valid acc 0.5302
+learning rate 0.05936906572928629
+False
+False
+ 44%|████▍     | 89/200 [6:05:01<7:34:46, 245.83s/it]train loss 0.2816572624969482
+train acc 0.9178000000190735
+valid loss 1.9951206592559814
+valid acc 0.5392
+learning rate 0.05859645501397052
+False
+False
+ 45%|████▌     | 90/200 [6:09:09<7:31:32, 246.30s/it]train loss 0.2962364508056641
+train acc 0.912280000038147
+valid loss 2.0075772144317625
+valid acc 0.5325
+learning rate 0.05782172325201159
+False
+False
+ 46%|████▌     | 91/200 [6:13:16<7:27:56, 246.58s/it]train loss 0.2719030427455902
+train acc 0.9212
+valid loss 2.5267439388275146
+valid acc 0.4907
+learning rate 0.057045061596879186
+False
+False
+ 46%|████▌     | 92/200 [6:17:22<7:23:41, 246.50s/it]train loss 0.28229534246444704
+train acc 0.917039999961853
+valid loss 1.9832048488616942
+valid acc 0.5619
+learning rate 0.056266661678215264
+False
+False
+ 46%|████▋     | 93/200 [6:21:28<7:19:03, 246.20s/it]train loss 0.26896323908805847
+train acc 0.9217999999809265
+valid loss 2.1057219598770143
+valid acc 0.5205
+learning rate 0.055486715554552306
+False
+False
+ 47%|████▋     | 94/200 [6:25:35<7:15:25, 246.47s/it]train loss 0.24123765130996705
+train acc 0.930360000038147
+valid loss 2.2020816778182986
+valid acc 0.5275
+learning rate 0.05470541566592575
+False
+False
+ 48%|████▊     | 95/200 [6:29:40<7:10:54, 246.24s/it]train loss 0.24434385699272157
+train acc 0.92854
+valid loss 2.1311831062316893
+valid acc 0.5297
+learning rate 0.05392295478639229
+False
+False
+ 48%|████▊     | 96/200 [6:33:48<7:07:47, 246.80s/it]train loss 0.23914794379234314
+train acc 0.9323399999809265
+valid loss 2.0371545547485352
+valid acc 0.5406
+learning rate 0.05313952597646571
+False
+False
+ 48%|████▊     | 97/200 [6:37:47<6:59:33, 244.40s/it]train loss 0.23488076475143432
+train acc 0.9327800000190735
+valid loss 1.997566273498535
+valid acc 0.5456
+learning rate 0.05235532253548216
+False
+False
+ 49%|████▉     | 98/200 [6:41:38<6:48:42, 240.41s/it]train loss 0.2384529110622406
+train acc 0.93178
+valid loss 2.0586303308486937
+valid acc 0.547
+learning rate 0.051570537953906447
+False
+False
+ 50%|████▉     | 99/200 [6:45:29<6:39:40, 237.43s/it]train loss 0.22062968768119812
+train acc 0.9367199999618531
+valid loss 2.2843812618255614
+valid acc 0.5088
+learning rate 0.05078536586559106
+False
+False
+ 50%|█████     | 100/200 [6:49:19<6:32:18, 235.39s/it]train loss 0.2282576103591919
+train acc 0.93468
+valid loss 2.2203198558807373
+valid acc 0.5281
+learning rate 0.050000000000000024
+False
+False
+ 50%|█████     | 101/200 [6:53:09<6:25:33, 233.67s/it]train loss 0.20159829248428346
+train acc 0.9435799999809266
+valid loss 2.2181309871673585
+valid acc 0.5397
+learning rate 0.049214634134409
+False
+False
+ 51%|█████     | 102/200 [6:57:02<6:21:29, 233.56s/it]train loss 0.19722158195495607
+train acc 0.944660000038147
+valid loss 2.216361142158508
+valid acc 0.5241
+learning rate 0.04842946204609361
+False
+False
+ 52%|█████▏    | 103/200 [7:00:54<6:16:25, 232.84s/it]train loss 0.21157470288276672
+train acc 0.940859999961853
+valid loss 2.539272654724121
+valid acc 0.4846
+learning rate 0.04764467746451789
+False
+False
+ 52%|█████▏    | 104/200 [7:04:46<6:12:07, 232.58s/it]train loss 0.2093870782661438
+train acc 0.942019999961853
+valid loss 2.137983144569397
+valid acc 0.5443
+learning rate 0.046860474023534354
+False
+False
+ 52%|█████▎    | 105/200 [7:08:38<6:08:00, 232.42s/it]train loss 0.17791157527923585
+train acc 0.9510199999809266
+valid loss 1.9970751335144044
+valid acc 0.5477
+learning rate 0.04607704521360778
+False
+False
+ 53%|█████▎    | 106/200 [7:12:31<6:04:35, 232.72s/it]train loss 0.17466745191574096
+train acc 0.95258
+valid loss 1.8710535495758056
+valid acc 0.561
+learning rate 0.04529458433407431
+False
+False
+ 54%|█████▎    | 107/200 [7:16:26<6:01:38, 233.32s/it]train loss 0.18269782696723938
+train acc 0.95036
+valid loss 1.9904422687530519
+valid acc 0.5393
+learning rate 0.04451328444544776
+False
+False
+ 54%|█████▍    | 108/200 [7:20:19<5:57:50, 233.37s/it]train loss 0.17052515948295593
+train acc 0.9535600000190735
+valid loss 2.441294477081299
+valid acc 0.5127
+learning rate 0.04373333832178482
+False
+False
+ 55%|█████▍    | 109/200 [7:24:11<5:53:25, 233.03s/it]train loss 0.17742630822181701
+train acc 0.952279999961853
+valid loss 1.981790827178955
+valid acc 0.5497
+learning rate 0.0429549384031209
+False
+False
+ 55%|█████▌    | 110/200 [7:28:02<5:48:34, 232.38s/it]train loss 0.1751965355873108
+train acc 0.952320000038147
+valid loss 1.9339259822845458
+valid acc 0.5615
+learning rate 0.042178276747988484
+False
+False
+ 56%|█████▌    | 111/200 [7:31:57<5:45:42, 233.06s/it]train loss 0.171497999792099
+train acc 0.9531600000381469
+valid loss 1.778473540878296
+valid acc 0.5844
+learning rate 0.04140354498602954
+False
+False
+ 56%|█████▌    | 112/200 [7:35:50<5:41:36, 232.91s/it]train loss 0.14107361046791075
+train acc 0.96274
+valid loss 1.8982415672302246
+valid acc 0.5688
+learning rate 0.0406309342707138
+False
+False
+ 56%|█████▋    | 113/200 [7:39:40<5:36:46, 232.26s/it]train loss 0.1279154912853241
+train acc 0.96742
+valid loss 1.8477005678176879
+valid acc 0.5716
+learning rate 0.03986063523217441
+False
+False
+ 57%|█████▋    | 114/200 [7:43:32<5:32:42, 232.12s/it]train loss 0.11580405049324036
+train acc 0.971959999961853
+valid loss 1.7942844568252563
+valid acc 0.5824
+learning rate 0.039092837930172916
+False
+False
+ 57%|█████▊    | 115/200 [7:47:24<5:28:33, 231.92s/it]train loss 0.11487919524669647
+train acc 0.972040000038147
+valid loss 2.1514981643676756
+valid acc 0.5252
+learning rate 0.03832773180720475
+False
+False
+ 58%|█████▊    | 116/200 [7:51:17<5:25:23, 232.42s/it]train loss 0.14662033414840697
+train acc 0.961520000038147
+valid loss 1.8542907531738282
+valid acc 0.5663
+learning rate 0.037565505641757285
+False
+False
+ 58%|█████▊    | 117/200 [7:55:09<5:21:15, 232.24s/it]train loss 0.1626909801006317
+train acc 0.9588
+valid loss 1.8499689500808716
+valid acc 0.562
+learning rate 0.03680634750173138
+False
+False
+ 59%|█████▉    | 118/200 [7:59:01<5:17:09, 232.07s/it]train loss 0.17584352728843688
+train acc 0.95346
+valid loss 1.9780295043945313
+valid acc 0.5432
+learning rate 0.036050444698038565
+False
+False
+ 60%|█████▉    | 119/200 [8:02:53<5:13:35, 232.29s/it]train loss 0.1439299611711502
+train acc 0.962199999961853
+valid loss 1.8136099699020385
+valid acc 0.5818
+learning rate 0.03529798373838483
+False
+False
+ 60%|██████    | 120/200 [8:06:45<5:09:34, 232.18s/it]train loss 0.09202359716892243
+train acc 0.97782
+valid loss 1.8773472015380859
+valid acc 0.5841
+learning rate 0.03454915028125267
+False
+False
+ 60%|██████    | 121/200 [8:10:39<5:06:25, 232.73s/it]train loss 0.06162429452657699
+train acc 0.9876600000190735
+valid loss 1.4457631771087647
+valid acc 0.6439
+learning rate 0.03380412909009255
+False
+False
+ 61%|██████    | 122/200 [8:14:33<5:03:00, 233.09s/it]train loss 0.030794118576049804
+train acc 0.9956600000190735
+valid loss 1.3168117040634155
+valid acc 0.6656
+learning rate 0.03306310398773545
+False
+False
+ 62%|██████▏   | 123/200 [8:18:26<4:58:56, 232.94s/it]train loss 0.018322688142061234
+train acc 0.99862
+valid loss 1.1862165939331055
+valid acc 0.6945
+learning rate 0.03232625781103717
+False
+False
+ 62%|██████▏   | 124/200 [8:22:18<4:54:40, 232.63s/it]train loss 0.012511819660663604
+train acc 0.99936
+valid loss 1.1447078342437744
+valid acc 0.7049
+learning rate 0.03159377236576613
+False
+False
+ 62%|██████▎   | 125/200 [8:26:14<4:52:07, 233.69s/it]train loss 0.010079580614566803
+train acc 0.99958
+valid loss 1.1252736806869508
+valid acc 0.7085
+learning rate 0.030865828381745543
+False
+False
+ 63%|██████▎   | 126/200 [8:30:08<4:48:15, 233.72s/it]train loss 0.010627252968847752
+train acc 0.99954
+valid loss 1.1171070425987244
+valid acc 0.7154
+learning rate 0.03014260546826098
+False
+False
+ 64%|██████▎   | 127/200 [8:34:00<4:43:40, 233.16s/it]train loss 0.011115598248839379
+train acc 0.9997
+valid loss 1.139502818107605
+valid acc 0.7117
+learning rate 0.02942428206974458
+False
+False
+ 64%|██████▍   | 128/200 [8:37:50<4:38:40, 232.22s/it]train loss 0.012006665629148483
+train acc 0.99962
+valid loss 1.1559094929695128
+valid acc 0.709
+learning rate 0.028711035421746387
+False
+False
+ 64%|██████▍   | 129/200 [8:41:41<4:34:23, 231.88s/it]train loss 0.012245355419516563
+train acc 0.99958
+valid loss 1.196396129989624
+valid acc 0.7003
+learning rate 0.02800304150720426
+False
+False
+ 65%|██████▌   | 130/200 [8:45:33<4:30:41, 232.02s/it]train loss 0.013892919719219209
+train acc 0.9995400000190735
+valid loss 1.230808210849762
+valid acc 0.6936
+learning rate 0.02730047501302268
+False
+False
+ 66%|██████▌   | 131/200 [8:49:24<4:26:24, 231.65s/it]train loss 0.5714238820433617
+train acc 0.8519399999809265
+valid loss 2.5590886566162108
+valid acc 0.4342
+learning rate 0.026603509286971357
+False
+False
+ 66%|██████▌   | 132/200 [8:53:16<4:22:38, 231.74s/it]train loss 0.6746543534851074
+train acc 0.810100000038147
+valid loss 1.998025210571289
+valid acc 0.5293
+learning rate 0.025912316294914244
+False
+False
+ 66%|██████▋   | 133/200 [8:57:08<4:18:51, 231.81s/it]train loss 0.2540575270175934
+train acc 0.9314799999809266
+valid loss 1.9742275169372558
+valid acc 0.5603
+learning rate 0.025227066578379632
+False
+False
+ 67%|██████▋   | 134/200 [9:01:01<4:15:36, 232.37s/it]train loss 0.13007329244613647
+train acc 0.967680000038147
+valid loss 1.5500991577148437
+valid acc 0.6167
+learning rate 0.024547929212481445
+False
+False
+ 68%|██████▊   | 135/200 [9:04:56<4:12:18, 232.90s/it]train loss 0.05640003237009048
+train acc 0.98974
+valid loss 1.41965279712677
+valid acc 0.6471
+learning rate 0.02387507176420257
+False
+False
+ 68%|██████▊   | 136/200 [9:08:51<4:09:14, 233.66s/it]train loss 0.028206484617590906
+train acc 0.9965
+valid loss 1.2279829011917114
+valid acc 0.6895
+learning rate 0.023208660251050166
+False
+False
+ 68%|██████▊   | 137/200 [9:12:47<4:06:04, 234.36s/it]train loss 0.015358654990792274
+train acc 0.99878
+valid loss 1.169302579689026
+valid acc 0.7006
+learning rate 0.022548859100093414
+False
+False
+ 69%|██████▉   | 138/200 [9:16:41<4:01:55, 234.12s/it]train loss 0.009886018762886525
+train acc 0.99954
+valid loss 1.120400188064575
+valid acc 0.7124
+learning rate 0.021895831107393474
+False
+False
