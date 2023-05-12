@@ -46,12 +46,14 @@ if __name__ == '__main__':
             chain(classifier.parameters()), 
             lr = 1)
     '''
+    
     optimizer = torch.optim.SGD(
-        chain(encoder.parameters(), classifier.parameters()), 
+        chain(encoder.parameters(), classifier.parameters()),
+        # classifier.parameters(),
         lr = args.lr, 
         momentum = 0.9, 
         weight_decay = 5e-4)
-
+  
     lr_scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(
         optimizer = optimizer, 
         T_max = args.epochs)
@@ -91,13 +93,14 @@ if __name__ == '__main__':
             best_val_acc = result_dict['valid acc']
             trainer.save(path = f'{save_path}/best.pth', others = {'epoch' : epoch})
         
-
-        for i, j in zip(compare_encoder, trainer.encoder.state_dict().values()):
-            assert encoder_check == (i == j).all().item(), "ERROR"
-        print((i == j).all().item())
-        for i, j in zip(compare_classifier, trainer.classifier.state_dict().values()):
-            assert False == (i == j).all().item(), "classifier not updating...."
-        print((i == j).all().item())
+        
+        if epoch % 10 == 1:
+            for i, j in zip(compare_encoder, trainer.encoder.state_dict().values()):
+                assert encoder_check == (i == j).all().item(), "ERROR"
+            print((i == j).all().item())
+            for i, j in zip(compare_classifier, trainer.classifier.state_dict().values()):
+                assert False == (i == j).all().item(), "classifier not updating...."
+            print((i == j).all().item())
 
 
 

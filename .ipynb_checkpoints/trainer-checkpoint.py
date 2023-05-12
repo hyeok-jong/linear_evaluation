@@ -24,6 +24,9 @@ class Trainer():
         self.loss_function = loss_function
         self.accuracy_function = accuracy_function
         self.method = method
+        
+        if method not in ['linear', 'finetune']:
+            raise TypeError(f"method {self.method}")
 
     def one_epoch_train(self):
         loss_list = list()
@@ -34,6 +37,7 @@ class Trainer():
             self.encoder.eval()
         elif self.method == 'finetune':
             self.encoder.train()
+            
             
         self.classifier.train()
         
@@ -56,7 +60,7 @@ class Trainer():
             loss_list.append(loss.detach().cpu().item()*batch_size)
             accuracy = self.accuracy_function(outputs.detach().cpu(), labels.cpu())
             acc_list.append(accuracy.item()*batch_size)
-            
+        self.lr_scheduler.step()
         return {
             'train loss' : sum(loss_list) / total_size,
             'train acc' : sum(acc_list) / total_size,

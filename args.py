@@ -5,14 +5,14 @@ import datetime
 
 def set_parser():
     parser = argparse.ArgumentParser('standard')
-    parser.add_argument('--model_path', type = str, default = './supcon.pth')
+    parser.add_argument('--model_path', type = str, default = './trained_models/supcon.pth')
     parser.add_argument('--dataset', type = str, default = 'cifar100')
     parser.add_argument('--method', type = str, default = 'linear', help = ['fineture, linear'])
 
     # learning hyperparameters
     parser.add_argument('--epochs', type = int, default = 100)
-    parser.add_argument('--lr', type = float, default = 0.5)
-    parser.add_argument('--batch_size', type = int, default = 128)
+    parser.add_argument('--lr', type = float, default = .1)
+    parser.add_argument('--batch_size', type = int, default = 256)
 
     parser.add_argument('--wandb_entity', type=str, default='hyeokjong', help='Wandb ID')
     parser.add_argument('--wandb_project', type=str, default=None, help='Project name')
