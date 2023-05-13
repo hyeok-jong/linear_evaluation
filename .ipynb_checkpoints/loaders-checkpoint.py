@@ -13,8 +13,8 @@ class ToRGB(torch.nn.Module):
 
 
 MEAN = {
-    'cifar10': [0.4914, 0.4822, 0.4465],
-    'cifar100': [0.50224, 0.4867, 0.4408],
+    'cifar10': [0.485, 0.456, 0.406],
+    'cifar100': [0.485, 0.456, 0.406],
     'stl10': [0.485, 0.456, 0.406],
     'imagenet': [0.485, 0.456, 0.406],
     'food101': [0.485, 0.456, 0.406],
@@ -26,8 +26,8 @@ MEAN = {
     'sun': [0.485, 0.456, 0.406],
 }
 STD = {
-    'cifar10': [0.2023, 0.1994, 0.2010],
-    'cifar100':[0.2675, 0.2565, 0.2761],
+    'cifar10': [0.229, 0.224, 0.225],
+    'cifar100':[0.229, 0.224, 0.225],
     'stl10': [0.229, 0.224, 0.225],
     'imagenet': [0.229, 0.224, 0.225],
     'food101': [0.229, 0.224, 0.225],
@@ -47,14 +47,14 @@ def set_loaders(dataset, batch_size = 256, method = 'string', size = 224, size_ 
     if method == 'linear':
         train_transform = transforms.Compose([
             # automatically along the shorter side
-            #transforms.Resize(size, interpolation = transforms.InterpolationMode.BICUBIC),
-            #transforms.CenterCrop(size),
+            transforms.Resize(size, interpolation = transforms.InterpolationMode.BICUBIC), 
+            transforms.CenterCrop(size),
             transforms.ToTensor(),
             transforms.Normalize(MEAN[dataset], STD[dataset])
             ])
         test_transform = transforms.Compose([
-            #transforms.Resize(size, interpolation = transforms.InterpolationMode.BICUBIC),
-            #transforms.CenterCrop(size),            
+            transforms.Resize(size, interpolation = transforms.InterpolationMode.BICUBIC),
+            transforms.CenterCrop(size),            
             transforms.ToTensor(),
             transforms.Normalize(MEAN[dataset], STD[dataset])
             ])
@@ -154,7 +154,7 @@ def set_loaders(dataset, batch_size = 256, method = 'string', size = 224, size_ 
         test_set = torchvision.datasets.Food101(
             root = data_root_dir,
             split = 'test',
-            downlaod = True,
+            download = True,
             transform = test_transform
         )
 
@@ -175,7 +175,7 @@ def set_loaders(dataset, batch_size = 256, method = 'string', size = 224, size_ 
         test_set = torchvision.datasets.StanfordCars(
             root = data_root_dir,
             split = 'test',
-            downlaod = True,
+            download = True,
             transform = test_transform
         )
 
@@ -301,13 +301,13 @@ def set_loaders(dataset, batch_size = 256, method = 'string', size = 224, size_ 
     elif dataset == 'flowers':
         train_set = torchvision.datasets.Flowers102(
             root = data_root_dir,
-            split = 'train',
+            split = 'test', # weird
             download = True,
             transform = train_transform)
 
         valid_set = torchvision.datasets.Flowers102(
             root = data_root_dir,
-            split = 'train',
+            split = 'val',
             download = True,
             transform = test_transform)
 

@@ -60,7 +60,7 @@ class Trainer():
             loss_list.append(loss.detach().cpu().item()*batch_size)
             accuracy = self.accuracy_function(outputs.detach().cpu(), labels.cpu())
             acc_list.append(accuracy.item()*batch_size)
-        self.lr_scheduler.step()
+        #self.lr_scheduler.step()
         return {
             'train loss' : sum(loss_list) / total_size,
             'train acc' : sum(acc_list) / total_size,

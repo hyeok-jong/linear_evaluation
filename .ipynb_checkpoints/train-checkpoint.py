@@ -15,7 +15,7 @@ from itertools import chain
 if __name__ == '__main__':
 
     args = set_parser()
-    save_path = f'./saves/{args.method}/{args.dataset}_{args.lr}'
+    save_path = f'./saves/{args.method}/{args.dataset}_{args.lr}_{args.exper}'
     os.makedirs(save_path, exist_ok = True)
 
     # SETTING
@@ -28,7 +28,7 @@ if __name__ == '__main__':
 
     encoder, classifier = set_models(
         path = args.model_path,
-        freeze = freeze,
+        encoder_freeze = freeze,
         dataset = args.dataset,
         cuda = True
     )
@@ -40,20 +40,25 @@ if __name__ == '__main__':
     loss_function = torch.nn.CrossEntropyLoss()#.cuda()
     accuracy_function = multi_accuracy
 
-    '''
-    if args.method == 'linear':
-        optimizer = torch.optim.LBFGS(
-            chain(classifier.parameters()), 
-            lr = 1)
-    '''
     
+    '''
+    # Ours
     optimizer = torch.optim.SGD(
-        chain(encoder.parameters(), classifier.parameters()),
+        chain(encoder.parameters(), classifier.parameters()), # Since for both linear evaluation and finetuning
         # classifier.parameters(),
         lr = args.lr, 
         momentum = 0.9, 
         weight_decay = 5e-4)
-  
+    '''
+    # Spijkervet
+    optimizer = torch.optim.Adam(
+        chain(
+            encoder.parameters(), classifier.parameters()
+        ), 
+        lr = args.lr,
+        weight_decay = 1.0e-6)
+    
+    
     lr_scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(
         optimizer = optimizer, 
         T_max = args.epochs)
