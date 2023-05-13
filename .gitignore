@@ -1,7 +1,7 @@
 
 
 saves
-./ipynb_checkpoints
+.ipynb_checkpoints
 **/__pycache__/
 wandb
 data
