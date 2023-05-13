@@ -3,6 +3,10 @@ Pyorch-style linear evaluation and transfer learning for self-supervised-learned
   
 This code covers linear evaluation which freeze encoder and then updates only classifier and finetuning which updates encoder and classifier together.  
 
+# Caution  
+Make sure that ur SSL-trained model pre-processing algorithm should be same with training for linear evalaution.  
+i.e. If SSL trained with [0, 1] and trained for linear evalation with [-1, 1] IDIOT.
+
 ### Note that
 In pytorch `model.state_dict()` and `model.named_parameters()` are different.  
 Both method gives parameters however, `state_dict()` gives more for instance `bn.running_mean`
@@ -52,5 +56,4 @@ So I tried another one
 I tried [SimCLR](https://github.com/Spijkervet/SimCLR/tree/master).  
 Very kind repo see [config](https://github.com/Spijkervet/SimCLR/blob/master/config/config.yaml).  
 
-
-
+2 hours...

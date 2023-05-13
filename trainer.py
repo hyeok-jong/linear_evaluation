@@ -47,7 +47,7 @@ class Trainer():
             labels = labels.cuda()
             batch_size = labels.shape[0]
             total_size += batch_size
-
+            
             features = self.encoder(images)
             outputs = self.classifier(features)
             loss = self.loss_function(outputs, labels)

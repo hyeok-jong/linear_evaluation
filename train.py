@@ -7,12 +7,13 @@ from tqdm import tqdm
 from args import set_parser
 from models import set_models
 from loaders import set_loaders
-from utils import multi_accuracy, init_wandb
+from utils import multi_accuracy, init_wandb, set_random
 from trainer import Trainer
 from itertools import chain
 
 
 if __name__ == '__main__':
+    set_random(0)
 
     args = set_parser()
     save_path = f'./saves/{args.method}/{args.dataset}_{args.lr}_{args.exper}'
@@ -52,9 +53,7 @@ if __name__ == '__main__':
     '''
     # Spijkervet
     optimizer = torch.optim.Adam(
-        chain(
-            encoder.parameters(), classifier.parameters()
-        ), 
+        chain(encoder.parameters(), classifier.parameters()), 
         lr = args.lr,
         weight_decay = 1.0e-6)
     

@@ -151,13 +151,15 @@ def set_models(path = './trained_models/checkpoint_0100.pth.tar', encoder_freeze
 def set_models(path = './trained_models/checkpoint_100.tar', encoder_freeze = True, dataset = 'model', cuda = True):
 
     '''
+    './trained_models/checkpoint_100.tar' : resnet18
+    './trained_models/checkpoint_100_resnet50.tar' : resnet50
     https://github.com/Spijkervet/SimCLR
     https://pypi.org/project/simclr/
     Due to BatchNormalization layer, two models
     '''
 
     # loads model and delete last fully connetected layer
-    model = torchvision.models.resnet18(weights = None)
+    model = torchvision.models.resnet50(weights = None)
     model.fc = Identity()
 
     # loads pre-trained model
@@ -181,7 +183,7 @@ def set_models(path = './trained_models/checkpoint_100.tar', encoder_freeze = Tr
             param.requires_grad = False
     
     # set classifier
-    classifier = Classifier(NUM_CLS[dataset], in_dim = 512)
+    classifier = Classifier(NUM_CLS[dataset], in_dim = 2048)
 
     # print grad
     '''

@@ -48,15 +48,15 @@ def set_loaders(dataset, batch_size = 256, method = 'string', size = 224, size_ 
         train_transform = transforms.Compose([
             # automatically along the shorter side
             transforms.Resize(size, interpolation = transforms.InterpolationMode.BICUBIC), 
-            transforms.CenterCrop(size),
+            #transforms.CenterCrop(size),
             transforms.ToTensor(),
-            transforms.Normalize(MEAN[dataset], STD[dataset])
+            #transforms.Normalize(MEAN[dataset], STD[dataset])
             ])
         test_transform = transforms.Compose([
             transforms.Resize(size, interpolation = transforms.InterpolationMode.BICUBIC),
-            transforms.CenterCrop(size),            
+            #transforms.CenterCrop(size),            
             transforms.ToTensor(),
-            transforms.Normalize(MEAN[dataset], STD[dataset])
+            #transforms.Normalize(MEAN[dataset], STD[dataset])
             ])
         
     elif method == 'finetune':
