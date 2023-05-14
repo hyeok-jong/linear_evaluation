@@ -53,7 +53,16 @@ But It has many [performance issuses](https://github.com/HobbitLong/SupContrast/
 So I tried another one  
 
 ### SimCLR  
+2 hours...  
 I tried [SimCLR](https://github.com/Spijkervet/SimCLR/tree/master).  
 Very kind repo see [config](https://github.com/Spijkervet/SimCLR/blob/master/config/config.yaml).  
 
-2 hours...
+1. Valid on STL10
+
+![]('./imgs/stl10.png')
+
+
+
+2. Valid on CIFAR10  
+![]('./imgs/cifar10.png')  
+![]('./imgs/cifar10_origin.png')  
