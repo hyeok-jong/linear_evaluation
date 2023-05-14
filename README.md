@@ -59,10 +59,10 @@ Very kind repo see [config](https://github.com/Spijkervet/SimCLR/blob/master/con
 
 1. Valid on STL10
 
-![]('./imgs/stl10.png')
+![](./imgs/stl10.png)
 
 
 
 2. Valid on CIFAR10  
-![]('./imgs/cifar10.png')  
-![]('./imgs/cifar10_origin.png')  
+![](./imgs/cifar10.pn')  
+![](./imgs/cifar10_origin.png)  
